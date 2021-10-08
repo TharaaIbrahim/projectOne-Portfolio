@@ -20,6 +20,10 @@ nav{
     font-family:Georgia, 'Times New Roman', Times, serif;
     padding-left:100px;
 }
+.logo a{
+    text-decoration: none;
+    color: #3399CC;
+}
 .navbar{
     display: flex;
     flex-wrap: wrap;
@@ -39,8 +43,13 @@ nav{
 }
 
 .navbar div a:hover{
-    background-color:#B2B1B9;
+    background-color:#3399cc;
     padding: 1rem;
+}
+
+.active,.active:hover{
+    background: #3399CC;
+    padding:1rem;
 }
 
 /* Background image */
@@ -195,7 +204,7 @@ nav{
     .skill h3{
         text-align: center;
         padding-top: 4%;
-        /* color:#3399CC; */
+       
         
     }
 
@@ -230,9 +239,12 @@ nav{
     .project>div{
         flex-basis: 20%;
         padding:0;
+        margin:0.75rem;
         background-color: white;
-        border:1px solid black;
-        
+        border:1px solid black; 
+    }
+    .project div a {
+        color: black;
     }
     .project p{
         padding:5%;
@@ -244,11 +256,17 @@ nav{
         padding:0;
         opacity: 0.8;       
     }
-    .project img:hover{
-        -webkit-transform: scale(1);
-	    transform: scale(1.2);
-        opacity: 1;
-    }
+
+   .hover:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    background:linear-gradient(white,#F4F4F4,#3399CC);
+    transition: 0.5s;
+   
+   }
+   .hover:hover .disable{
+       display: none;
+   }
 
    .project h5{
        text-align: center;
@@ -260,7 +278,7 @@ nav{
    /* Testimonials */
    .section6{
       background-color: white;
-      padding-bottom: 5%;
+      padding-bottom: 3%;
    }
    .section6>h2{
     text-align: center;
@@ -272,33 +290,33 @@ nav{
        flex-wrap: wrap;
        padding-top: 1%;
        justify-content: center;
-       gap:2.5%;
+       gap:3%;
    }
    .testimonials>div{
        flex-basis: 20%;
+       margin:0.75rem;
        background-color:#F4F4F4 ;
        border: 5px solid #3399CC;
        border-radius: 5%;
+      
    }
     .testimonials p{
-        padding: 1%;
         text-align:center;
      
     }
-   .testimonials h6{
+   .testimonials h5,h6{
        text-align: center;
    }
-   .testimonials h3{
-       text-align: center;
-   }
+   
    .section6 img{
-    border-radius: 50%;
-    width:15rem;
-    padding-left:30%;
-    padding-top: 5%; 
-    padding-bottom: 7%; 
+    border-radius: 10%;
+    width:70%;
+    height: auto;
+    padding-left:35%;
+    padding-top: 3%; 
 }
 .section6 i{
+    font-size: 0.7em;
     padding-left: 30%;
     color: #3399CC;
 }
@@ -315,16 +333,15 @@ nav{
     padding-top: 1%;
 }
 .contact{
-    width: 30%;
-    margin-left: 40%;
-    
+    display: grid;
+    grid-template-columns: repeat(5,minmax(100px,auto));
 }
 .item{
-   padding-right: 20%;
-   padding-top: 5%;
+    margin-left: 5%;
+    padding-top: 10%;
+
 }
 .contact i{
-    display: inline;
     padding-left:10%;
     color: black;
     
@@ -336,9 +353,8 @@ nav{
     display: inline;
     padding-left:6%;
 }
-.item a{
-    padding-top: 5%;
-    padding-left: 1.25rem;
+.contact a{
+    padding-left: 5%;
 }
 
 /* Footer section */
@@ -354,37 +370,32 @@ footer label{
 .footerside {
     display:flex;
     flex-wrap: wrap;
-   padding-left: 55%;   
+   padding-left: 47%;   
 }
 .footerside div{
-   padding-right:1.25rem;
    padding-top:1.25rem;  
 }
 .footerside div a{
     text-decoration: none;
     color: white;
-    padding:20px;
+    padding:1.25rem;
     
 }
 .footerside div a:hover{
     border-bottom:3px solid #3399CC;
 }
  footer>p{
-     align-items: center;
      padding-left:35% ;
      color: white;
  }
  footer>p>a{
      color: white;
  }
- .button>a>i{
-    float: right;
-    padding-right: 5%;
-    font-size: 3em;
-    padding-left: 50%;
-    color: #3399CC;
-    padding-top: 0.625rem;
-}
+ .up i {
+     font-size: 2.2em;
+     color: #3399CC;  
+ }
+
 /* Media Query  */
 
  @media only screen  and (min-width:901px) and (max-width:1200px) {
@@ -409,23 +420,25 @@ footer label{
     .project>div{
         margin:1%;
     }
-
-    .contact a>i{
-        padding-left: 2%;
+    .testimonials{
+        gap: 2%;
     }
-    .contact p{
-        padding-left:5%;
+    .testimonials>div{
+        flex-basis: 23%;
+    }
+    .testimonials img{
+        width:65%;
+        padding-left: auto;
+        padding-right: auto;
     }
    
     .footerside {
-       padding-left: 37%;   
+       padding-left: 39%;   
     
     }
-    footer>p{
-        padding-left: 35%;
-       
-     }
-    
+    .footerside div a{
+       padding-right: 0.5rem;
+    }
    
 }
 
@@ -442,14 +455,19 @@ footer label{
         padding-right: 1%;
         
     }
+    .navbar div a:hover{
+        padding: 0.5rem;
+    }
     .logo{
         font-size: 1.5em;
         padding-left:10%;
     }
     .navbar div{
-        padding-left: 0.6rem;
+        padding-left: 0.3rem;
         font-size: 0.8em;
-
+    }
+    .navbar div a{
+        padding:0.42rem
     }
     .section1{
         padding: 10%;
@@ -553,11 +571,19 @@ footer label{
        }
        
        .testimonials>div{
-           flex-basis:100%;
-           margin: 3%;
+           flex-basis:57%;
+           margin: 1%;
            
        }
-
+       .testimonials img{
+           width:65%;
+           height: auto;
+           padding-left:auto;
+           padding-right: auto;
+       }
+       .testimonials h5,h6{
+           font-size: 0.9em;
+       }
        .section7>h2{ 
         font-size: 1.5em;
         padding-top: 5%;
@@ -565,36 +591,33 @@ footer label{
     .item{
         padding-right: 0%;
      }
-    .contact{
-        width: 75%;
+     .contact{
+        display: block;
         margin-left: 15%;
-    }
-    .contact p{
-        display: inline;
-        padding-left:7%;
-    }
-    .contact a>i{
-        padding-left: 3%;
-    }
-    .footerside {
-       padding-left:10%;
-       padding-bottom: 2%;
-       display: block;   
-    }
-   
-     footer>p{
-        padding-left: 2%;
-        padding-right: 2%;
-        font-size: 0.8em;
+        
      }
-     
-    .button>a>i{
-        font-size: 2.5em;
-    
-    }
-    .button{
-        padding-left: 5%;
+     .item{
+         padding-top: 2%;
+     }
+     footer{
+         display: block;
+     }
+     .footerside{
+         padding-left: 5%;
+         font-size: 0.8em;
+     }
+     .footerside>div{
+         padding-top: 0;
+         padding-bottom: 1%;
+     }
 
+    footer p{
+        font-size: 0.8em;
+        padding-left: 25%;
+        padding-right:20%;
+    }
+    .up i{
+        font-size: 1.5em;
     }
     
 } 
@@ -605,7 +628,8 @@ footer label{
         gap: 15%;
     }
     .navbar{
-        padding-top: 3%;
+        padding-top: 1%;
+        padding-left: 2%;
     }
     .navbar div{
         padding-left: 0.8rem;
@@ -635,7 +659,7 @@ footer label{
         grid-row:1/2;
         padding-top: 1%;
         text-align:left;
-        padding-left: 20%;
+        padding-left: 30%;
     }
     .section2 img{
         width: 100%;
@@ -663,38 +687,42 @@ footer label{
     .project>div{
         margin: 2%;
       }
-
+    .testimonials{
+        gap:0%;
+    }
       .testimonials>div{
-        flex-basis:25%;
-        margin: 1%;
+        flex-basis:32%;
+        margin: 0.5%;
         
     }
-    .contact{
-        width: 55%;
-        margin-left: 33%;
+    .testimonials img{
+        width:73%;
+        height: auto;
+        padding-right: auto;
+        padding-left: auto;
     }
-   .contact p{
-        display: inline;
-        padding-left:5%;
-    }
-    .contact a>i{
-        padding-left: 6%;
-}
-.footerside {
-    padding-left:5%;  
    
- }
+    .contact{
+       display: block;
+       text-align: justify;
+       margin-left: 25%;
+    }
+    .item{
+        padding-top: 2%;
+    }
+     .footerside {
+    padding-left:13%;
+   }
 
-  footer>p{
-     padding-left: 13%;
-     padding-right: 5%;
-  }
-  .logo{
-     font-size: 1.5em;
-     padding-left:10%;
- }
- .button>a>i{
-     font-size: 2.5em;
- }
+   .footerside div a{
+     padding-right: 0rem;
+   }
+   footer p{
+       padding-left: 30%;
+       padding-right: 10%;
+   }
+    .up i{
+        font-size: 2rem;
+    }
 
 }
