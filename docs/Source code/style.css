@@ -601,9 +601,11 @@ footer label{
      }
      footer{
          display: block;
+         padding-bottom: 10%;
      }
      .footerside{
          padding-left: 5%;
+         padding-bottom:5% ;
          font-size: 0.8em;
      }
      .footerside>div{
